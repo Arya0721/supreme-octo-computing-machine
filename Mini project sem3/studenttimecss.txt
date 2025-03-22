@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0}
+body{
+   background-image: url(att.jpg);
+    padding-top: 10vh;
+}
+table{
+    background-color: rgb(167, 222, 250);
+    margin: auto;
+    margin-top: 5%;
+}

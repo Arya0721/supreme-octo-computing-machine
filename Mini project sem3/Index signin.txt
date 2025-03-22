@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" type="text/css" href="globals.css">
+
+<style>
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 160%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+        
+        <div class ="container">
+            
+            <form action="signin.php" method="post" novalidate>
+            <ul class = "list">
+            <h1><B>SIGN IN PAGE<B></h1>
+            <br>
+            <br>
+            <?php if (isset($_GET['error'])){?>
+                <p class="error"><?php echo $_GET['error']; ?></p>
+                <?php } ?>
+           
+            <BR>
+            <BR>
+            
+            <label>First Name*</label>
+            <input type="text" class="form-control" id="Firstname" name="firstname" placeholder="Firstname"/>
+            <br>
+            <br>
+            <label>Middle Name*</label>
+            <input type="text" class="form-control" id="Middlename" name="middlename"  placeholder="MiddleName">
+           
+            <br>
+            <br>
+            <label>Last Name*</label>
+            <input type="text" class="form-control" id="Lastname" name="lastname"  placeholder="LastName">
+            <br><br>
+            <label>Phone Number*</label>
+            <input type="text" class="form-control" id="Phonenumber" name="phonenumber"  placeholder="PhoneNumber">
+            <br><br>
+            <label>Email-id*</label>
+            <input type="text" class="form-control" id="EmailID" name="emailid"  placeholder="EmailID">
+      
+            <br>
+            <br>
+
+            <fieldset>
+    <legend><B>Select your gender :* </B></legend>
+
+    <div>
+      <label for="male">
+      <input type="radio" value="Male" name="gender" id="sectionida"> MALE
+            </label>
+      <label for="female">
+      <input type="radio" value="Female" name="gender" id="sectionidb"> FEMALE
+      </label>
+    </div>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<legend><B>Select your profession:* </B></legend>
+
+    <div>
+      <label for="teacher">
+      <input type="radio" value="teacher" name="profession" id="sectionida"> TEACHER
+            </label>
+      <label for="student">
+      <input type="radio" value="student" name="profession" id="sectionidb"> STUDENT
+      </label>
+
+    </div>
+</fieldset>
+<br>
+<br>
+<div>
+<label>Password*</label>
+  <input type="text" class="form-control" id="password" name="password"  placeholder="password">
+  <br>
+  <br>
+  <label>Confirm Password</label>
+  <input type="text" class="form-control" id="confirm password" name="confirm password"  placeholder="confirm password">
+</div>
+<br>
+</ul>
+</ul>
+<br>
+<br>
+<br>
+<br>
+
+
+  <div class="center">
+    <button>SUBMIT</button>
+  </div>
+
+
+</form>
+
+</body>
+</html>

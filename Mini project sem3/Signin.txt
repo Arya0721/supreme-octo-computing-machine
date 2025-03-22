@@ -1,0 +1,74 @@
+<?php
+ $firstname = $_POST['firstname'];
+ $middelname = $_POST['middlename'];
+ $lastname = $_POST['lastname'];
+ $phonenumber = $_POST['phonenumber'];
+ $gender = $_POST['gender'];
+ $emailid = $_POST['emailid'];
+ $profession = $_POST['profession'];
+ $password = $_POST['password'];
+ 
+
+ if (empty($firstname)){
+    header("Location: indexs.php?error=Firstname is required");
+    exit();
+ }
+ else if (empty($middelname)){
+    header("Location: indexs.php?error=Middelname is required");
+    exit();
+ }
+ else if (empty($lastname)){
+    header("Location: indexs.php?error=Lastname is required");
+    exit();
+ }
+ else if(empty($phonenumber)){
+    header("Location: indexs.php?error=Phonenumber is invalid");
+    exit();
+ }
+ if( ! filter_var($emailid, FILTER_VALIDATE_EMAIL)){
+    header("Location: indexs.php?error=Emailid is invalid");
+    exit();
+ }
+ if(empty($gender)){
+    header("Location: indexs.php?error=Gender is required");
+    exit();
+ }
+ if(empty($profession)){
+    header("Location: indexs.php?error=Profession is required");
+    exit();
+ }
+
+ if(strlen($password)<8){
+    header("Location: indexs.php?error=Password must have atleast 8 characters");
+    exit();
+ }
+
+ if( ! preg_match("/[a-z]/i", $password)){
+    header("Location: indexs.php?error=Password must have atleast one alphabet");
+    exit();
+ }
+ if( ! preg_match("/[0-9]/", $password)){
+    header("Location: indexs.php?error=Password must have atleast one number");
+    exit();
+ }
+
+ $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+ require "signdatabase.php";
+
+ $sql = "INSERT INTO signin(firstname, middelname, lastname, emailid, phonenumber, gender, profession, password_hash) VALUES(?,?,?,?,?,?,?,?)";
+
+ $stmt = $mysqli->stmt_init();
+
+if(! $stmt->prepare($sql)){
+    die("SQL error: " . $mysqli->error);
+}
+
+$stmt->bind_param("ssssisss",$firstname, $middelname,$lastname,$emailid, $phonenumber, $gender, $profession, $password_hash );
+
+$stmt->execute();
+
+echo"signin successful";
+ 
+
+?>

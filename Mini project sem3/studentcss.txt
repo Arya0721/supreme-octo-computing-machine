@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0}
+h1{
+    background-color:  rgb(135, 162, 225);
+    padding-bottom: 2vh;
+    padding-left: 165vh;
+}
+.form-login{
+    width:170px;
+    height: auto;
+    padding: 10px 30px;
+    background-color: rgb(97, 56, 142);
+    margin: auto;
+    box-shadow: 0 0 10px 0 #000;
+}
+
+ul.listt{
+list-style-type: none;
+text-align: center;
+}
+
+
+
+ul.listt li input{
+    width: 120px;
+    text-align: center;
+    padding: 8px 0px;
+    border:none;
+    background-color: #bad1d0;
+    border-radius: 5px;
+
+}
+
+ul.listt li input[type="button"]{
+    background-color: rgb(120, 139, 169);
+    color: #fff;
+}

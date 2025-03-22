@@ -1,0 +1,28 @@
+<?php
+$server = "localhost";
+$emailid="root";
+$password="";
+$dbname="website";
+
+
+
+$conn = new mysqli("localhost", "root","","website");
+    if($conn->connect_error){
+        die("Failed to connect : ".$con->connect_error);
+    }
+
+    if(isset($_POST['text'])){
+        $text = $_POST['text'];
+
+        $sql = "INSERT INTO attendance( Name,Date,Time)VALUES('$text', NOW(), NOW())";
+        if($conn->query($sql)===TRUE){
+            echo"Successfully marked attendance";
+        }else{
+            echo"Error:" . $sql . "<br>" . $conn->error;
+        }
+
+    }
+    $conn->close();
+
+
+?>

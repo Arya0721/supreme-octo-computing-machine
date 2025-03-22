@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> TIME TABLE </title>
+        <link rel="stylesheet" type="text/css" href="studenttime.css">
+    </head>
+<body bgcolor=white>
+     <tr align="center">
+        <th>TIME TABLE</th>
+     </tr>
+    <table border="1" align ="center">
+        <tr align="center">
+            <td> Time </td>
+            <th>9:45-10:45</th>
+            <th>10:45-11:45</th>
+            <th>11:45-12:45</th>
+            <th>12:45-1:45</th>
+            <th>1:45-2:15</th>
+            <th>2:15-3:15</th>
+            <th>3:15-4:15</th>
+        </tr>
+        <tr align="center">
+            <td rowspan="1">MONDAY</td>
+            <th><a href="qr.php">EM3(AJ)</a></th>
+            <th><a href="qr.php">DS(CG)</a></th>
+            <th colspan="2"><a href="qr.php">S1:DS(CG)</a><br><a href="qr.php">S2:DLCOA(PS)</a><br><a href="qr.php">S3:CG(NM)</a><br><a href="qr.php">S4:OOPM(RS)</a></th>
+            <td rowspan="6" align="center">L<br>U<br>N<br>C<br>H<br></td>
+           <th><a href="qr.php">DSGT(SS)</a></th>
+            <th><a href="qr.php">CG(NM)</a></th>
+        </tr>
+        <tr align="center">
+            <td rowspan="1">TUESDAY</td>
+            <th colspan="2"><a href="qr.php">S1:OOPM(NM)</a><br><a href="qr.php">S2:EM3(AJ)</a><br><a href="qr.php">S3:DS(CG)</a><br><a href="qr.php">S4:DLCOA(PB)</a></th>
+            <th><a href="qr.php">DLCOA(VP)</a></th>
+            <th><a href="qr.php">EM3(AJ)</a></th>
+            <th><a href="qr.php">DLCOA(AS)</a></th>
+            <th>-----</th>
+        </tr>
+        <tr align="center">
+            <td rowspan="1">WEDNESDAY</td>
+            <th colspan="2">S1:----<br><a href="qr.php">S2:DS(CG)</a><br><a href="qr.php">S3:DLCOA(HD)</a><br><a href="qr.php">S4:CG(NM)</a></th>
+            <th><a href="qr.php">OOPM(SK)</a></th>
+            <th><a href="qr.php">DSGT(AS)</a></th>
+            <th><a href="qr.php">DS(CG)</a></th>
+            <th>----</th>
+        </tr>
+        <tr align="center">
+            <td rowspan="1">THURSDAY</td>
+            <th colspan="2"><a href="qr.php">S1:CG(NM)</a><br><a href="qr.php">S2:OOPM(NM)</a><br><a href="qr.php">S3:EM3(AJ)</a><br><a href="qr.php">S4:DS(CG)</a></th>
+            <th><a href="qr.php">DS(CG)</a></th>
+            <th><a href="qr.php">CG(NM)</a></th>
+            <th><a href="qr.php">OOPM(SK)</a></th>
+            <th><a href="qr.php">EM3(AJ)</a></th>
+        </tr>
+        <tr align="center">
+            <td rowspan="1">FRIDAY</td>
+            <th colspan="2"><a href="qr.php">S1:DLCOA(AS)</a><br><a href="qr.php">S2:CG(NM)</a><br><a href="qr.php">S3:OOPM(SM)</a><br><a href="qr.php">S4:EM3(AJ)</a></th>
+            <th><a href="qr.php">CG(NM)</a></th>
+            <th><a href="qr.php">DLCOA(AS)</a></th>
+            <th><a href="qr.php">DSGT(SS)</a></th>
+            <th>----</th>
+        </tr>    
+        <tr align="center">
+            <td rowspan="1">SATURDAY</td>
+            <th colspan="4"><a href="qr.php">   MINI PROJECT     </a></th>
+            <th colspan="2"><a href="qr.php">   MINI PROJECT     </a></th>
+        </tr>
+    </table>
+</body>

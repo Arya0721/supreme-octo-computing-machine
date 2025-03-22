@@ -1,0 +1,46 @@
+<?php
+session_start();
+
+$emailid = $_POST['emailid'];
+$password = $_POST['password'];
+if(empty($emailid)){
+    header("Location: indexl.php?error=Emailid is required");
+    exit();
+
+}else if(empty($password)){
+    header("Location: indexl.php?error=Password is required");
+    exit();
+
+}else{
+     $con = new mysqli("localhost", "root","","website");
+    if($con->connect_error){
+        die("Failed to connect : ".$con->connect_error);
+    }else{
+
+    $stmt = $con->prepare("select * from signin where emailid = ?");
+    $stmt->bind_param("s",$emailid);
+    $stmt->execute();
+    $stmt_result = $stmt->get_result();
+    if($stmt_result->num_rows >0){
+        $data = $stmt_result->fetch_assoc();
+        if($data['password_hash']=== $password){
+            echo "<h2>Login successfully</h2>";
+        }else{
+            echo "<h2>invalid password</h2> ";  
+        }
+
+    }else{
+        echo "<h2>invalid Emailid</h2> ";
+    }
+    
+    if($data['profession']== "Student"){
+        header('location: Student.php');
+    }else if($data['profession']=="Teacher"){
+        header('location: teacher.php');
+    }
+}
+}
+
+?>
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher</title>
+    <link rel="stylesheet" type="text/css" href="studentstyle.css">
+<style>
+    img {
+        width: 60px;
+        border-radius: 20px;
+        height: 60px;
+        float: right;
+        padding: auto;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="student.css">
+</head>
+<h1>
+<div class="form-login">
+
+<img src="login.webp">
+
+<ul class = "listt">
+    <li><input type="button" name="TEACHER NAME" value="TEACHER NAME"></li>
+</ul>
+</div>
+</h1>
+<body>
+
+<div class="form-container">
+    <ul class = "list">
+    <form action ="teachertime.php" class="inline">
+        <li><button class="float-left submit-button" >Time table</button></li>
+    </ul>
+</div>
+
+
+</head>
+</body>
+</html>
